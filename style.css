@@ -1,0 +1,248 @@
+:root {
+    /* ## Colors */
+
+/* ### Primary */
+
+--Light-red: hsl(0, 100%, 67%);
+--Orangey-yellow: hsl(39, 100%, 56%);
+--Green-teal: hsl(166, 100%, 37%);
+--Cobalt-blue: hsl(234, 85%, 45%);
+
+/* ### Neutral */
+
+--White: hsl(0, 0%, 100%);
+--Pale-blue: hsl(221, 100%, 96%);
+--Light-lavender: hsl(241, 100%, 89%);
+--Dark-gray-blue: hsl(224, 30%, 27%);
+
+/* ## background Gradients */
+
+--Light-slate-blue : hsl(252, 100%, 67%);
+--Light-royal-blue : hsl(241, 81%, 54%);
+
+/* circle */
+
+--Violet-blue: hsl(256, 72%, 46%, 1);
+--Persian-blue: hsla(241, 72%, 46%, 0);
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+body {
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+.wrapper {
+    min-width: 23.4375em;
+    max-width: 45em;
+    box-shadow: 1px 2px 39px 1px hsla(241, 100%, 89%, 0.15), 3px 6px 1px 2px hsla(224, 30%, 27%, 0);
+}
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.upper {
+    background-image: linear-gradient( hsla(252, 100%, 67%, 1), hsla(241, 81%, 54%, 1));
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 0 0 2rem 2rem;
+}
+
+.circle {
+    background: linear-gradient(hsl(256, 72%, 46%, 0.76), hsla(241, 72%, 46%, 0.04));
+    border-radius: 50%;
+    height: 8.7em;
+    width: 8.7em;
+    max-width: 11em;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.result-score {
+    font-size: 3.5rem;
+    align-self: center;
+    justify-self: center;
+    color: var(--White);
+}
+
+.circle p:nth-child(2) {
+    color: hsla(241, 100%, 89%, 0.5);
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+.result-text {
+    padding: 1.4em 0 1.3em;
+    color: var(--Light-lavender);
+    font-size: large;
+    font-weight: 700;
+}
+
+#compliment {
+    margin: 1.1em 0 0;
+    font-size: 1.3rem;
+    color: var(--Pale-blue);
+}
+
+.compliment-text {
+    color: var(--Pale-blue);
+    margin: 0 3em 0;
+    padding: 0.6em 0 2em;
+    color: var(--Light-lavender);
+    font-size: 0.953rem;
+}
+
+/* lower  */
+
+.header {
+    padding: 1.4em 0 1.6em 1.6em;
+    color: var(--Dark-gray-blue);
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.reaction, .Memory, .Verbal, .Visual {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 0.5em;
+    padding: 0.7em;
+    margin: 0 1.6em 0.7em;
+    font-weight: 600;
+}
+
+.lower img + p {
+    margin-right: 8em;
+    text-align: left;
+}
+
+.Verbal img + p , .Visual img + p{
+    margin-right: calc(8em + 0.7em);
+}
+
+.reaction {
+    background-color: hsla(0, 100%, 67%, 0.09);
+    color: var(--Light-red);
+}
+
+.Memory {
+    background-color: hsla(39, 100%, 56%, 0.09);
+    color: var(--Orangey-yellow);
+}
+
+.Verbal {
+    background-color: hsla(166, 100%, 37%, 0.09);
+    color: var(--Green-teal);
+}
+
+.Visual {
+  background-color: hsla(234, 85%, 45%, 0.09);
+  color: var(--Cobalt-blue);
+}
+
+span {
+    color: var(--Dark-gray-blue);
+    font-weight: 700;
+}
+
+span p, .item p:last-child {
+    color: var(--Light-lavender);
+    font-weight: 700;
+}
+
+.button {
+    background-color: var(--Dark-gray-blue);
+    color: var(--White);
+    padding: 0.87em;
+    margin: 1.2em 2.1em 2em ;
+    text-align: center;
+    border-radius: 1.4em;
+}
+
+.button:hover {
+    background-image: linear-gradient(var(--Light-slate-blue)  ,var(--Light-royal-blue)100%);
+}
+
+@media screen and (min-width: 700px) {
+    .wrapper {
+        display: flex;
+        border-radius: 1.4em;
+        width: 39em;
+    }
+    
+    .upper {
+        border-radius: 1.4em;
+        justify-content: flex-start;
+    }
+
+    .result-text {
+        padding-bottom: 1.6em;
+        font-size: 1.3rem;
+    }
+    .result-score {
+        font-size: 3.5rem;
+    }
+
+    .circle p:nth-child(2) {
+        font-size: 0.9rem;
+    }
+
+    .circle {
+        margin: 0;
+        border-radius: 50%;
+        height: 10.5em;
+        width: 10.5em;
+    }
+
+    #compliment {
+        margin: 1.1em 0 0.2em;
+        font-size: 1.6rem;
+    }
+
+    .compliment-text {
+        padding-bottom: 0;
+        color: var(--Light-lavender);
+        font-size: 0.96rem;
+    }
+
+    .lower , .upper {
+        flex: 1;
+    }
+
+    .lower img + p {
+        margin-right: 4em;
+    }
+
+    .header {
+        font-size: larger;
+        padding: 1.5em 1.6em 1.4em;
+    }
+    .Verbal img + p , .Visual img + p{
+        margin-right: calc(4em + 0.75em);
+    }
+
+    .reaction, .Memory, .Verbal, .Visual {
+        margin-bottom: 0.8em;
+        font-size: large;
+        padding: calc(0.7em + 0.1em);
+    }
+
+    .button {
+        margin-top: 2em;
+        margin-bottom: 2.6em;
+    }
+}
