@@ -36,18 +36,15 @@
 
 body {
     font-family: 'Hanken Grotesk', sans-serif;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
 }
 
 .wrapper {
     min-width: 23.4375em;
     max-width: 45em;
     box-shadow: 1px 2px 39px 1px hsla(241, 100%, 89%, 0.15), 3px 6px 1px 2px hsla(224, 30%, 27%, 0);
-}
-.centered {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 .upper {
@@ -177,7 +174,7 @@ span p, .item p:last-child {
     background-image: linear-gradient(var(--Light-slate-blue)  ,var(--Light-royal-blue)100%);
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 600px) {
     .wrapper {
         display: flex;
         border-radius: 1.4em;
